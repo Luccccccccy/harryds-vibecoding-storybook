@@ -1,0 +1,44 @@
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--comp-link-button-gap, 10px);
+  background: var(--comp-link-button-bg, #000);
+  color: var(--comp-link-button-color, #fff);
+  height: var(--comp-link-button-height, 69px);
+  width: var(--comp-link-button-width, 400px);
+  padding: var(--comp-link-button-padding-y, 20px) var(--comp-link-button-padding-x, 40px);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--comp-link-button-radius, 8px);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.link-button--light {
+  background: var(--comp-link-button-bg-light, #fff);
+  color: var(--comp-link-button-color-light, #000);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.link-button__icon {
+  width: var(--comp-link-button-icon-size, 24px);
+  height: var(--comp-link-button-icon-size, 24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.link-button__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.link-button__label {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: var(--comp-link-button-font-size, 24px);
+  line-height: 1;
+}

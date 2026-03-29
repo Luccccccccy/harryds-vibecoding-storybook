@@ -1,0 +1,75 @@
+:root {
+  /* ─── Reference Tokens ─── */
+  --ref-palette-black: #000000;
+  --ref-palette-white: #ffffff;
+  --ref-palette-gray-400: #666666;
+
+  --ref-spacing-0: 0px;
+  --ref-spacing-10: 10px;
+  --ref-spacing-20: 20px;
+  --ref-spacing-40: 40px;
+
+  --ref-radius-full: 9999px;
+  --ref-radius-xl: 30px;
+  --ref-radius-8: 8px;
+
+  --ref-font-size-18: 18px;
+  --ref-font-size-24: 24px;
+  --ref-font-size-32: 32px;
+
+  --ref-size-avatar-lg: 120px;
+  --ref-size-avatar-md: 80px;
+  --ref-size-avatar-sm: 40px;
+  --ref-size-button-height: 69px;
+  --ref-size-button-width-social: 400px;
+  --ref-size-icon: 24px;
+
+  /* ─── System Tokens ─── */
+  --sys-color-surface: var(--ref-palette-black);
+  --sys-color-on-surface: var(--ref-palette-white);
+  --sys-color-text-primary: var(--ref-palette-black);
+  --sys-color-text-secondary: var(--ref-palette-gray-400);
+
+  --sys-spacing-sm: var(--ref-spacing-10);
+  --sys-spacing-md: var(--ref-spacing-20);
+  --sys-spacing-lg: var(--ref-spacing-40);
+
+  --sys-radius-full: var(--ref-radius-full);
+  --sys-radius-page: var(--ref-radius-xl);
+
+  /* ─── Component Tokens: Avatar ─── */
+  --comp-avatar-size: var(--ref-size-avatar-lg);
+  --comp-avatar-radius: var(--sys-radius-full);
+
+  /* ─── Component Tokens: LinkButton ─── */
+  --comp-link-button-bg: var(--sys-color-surface);
+  --comp-link-button-color: var(--sys-color-on-surface);
+  --comp-link-button-bg-light: var(--ref-palette-white);
+  --comp-link-button-color-light: var(--ref-palette-black);
+  --comp-link-button-height: var(--ref-size-button-height);
+  --comp-link-button-width: var(--ref-size-button-width-social);
+  --comp-link-button-padding-x: var(--sys-spacing-lg);
+  --comp-link-button-padding-y: var(--sys-spacing-md);
+  --comp-link-button-gap: var(--sys-spacing-sm);
+  --comp-link-button-font-size: var(--ref-font-size-24);
+  --comp-link-button-icon-size: var(--ref-size-icon);
+  --comp-link-button-radius: var(--ref-radius-8);
+
+  /* ─── Component Tokens: LikeButton ─── */
+  --comp-like-button-bg: transparent;
+  --comp-like-button-color: var(--sys-color-text-primary);
+  --comp-like-button-color-active: #ff2a6a;
+  --comp-like-button-font-size: var(--ref-font-size-24);
+  --comp-like-button-gap: var(--sys-spacing-sm);
+  --comp-like-button-icon-size: var(--ref-size-icon);
+
+  /* ─── Component Tokens: ProfileCard ─── */
+  --comp-profile-card-gap: var(--sys-spacing-lg);
+  --comp-profile-avatar-gap: var(--sys-spacing-md);
+  --comp-profile-info-gap: var(--sys-spacing-sm);
+  --comp-profile-links-gap: var(--sys-spacing-md);
+  --comp-profile-name-size: var(--ref-font-size-32);
+  --comp-profile-info-size: var(--ref-font-size-18);
+  --comp-profile-name-color: var(--sys-color-text-primary);
+  --comp-profile-info-color: var(--sys-color-text-secondary);
+}

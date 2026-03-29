@@ -1,0 +1,18 @@
+.avatar {
+  width: var(--comp-avatar-size);
+  height: var(--comp-avatar-size);
+  border-radius: var(--comp-avatar-radius);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar--sm { --comp-avatar-size: var(--ref-size-avatar-sm, 40px); }
+.avatar--md { --comp-avatar-size: var(--ref-size-avatar-md, 80px); }
+.avatar--lg { --comp-avatar-size: var(--ref-size-avatar-lg, 120px); }
+
+.avatar__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
