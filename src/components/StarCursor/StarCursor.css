@@ -1,0 +1,26 @@
+.star-cursor-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes starFloat {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--drift)), -250%) rotate(calc(var(--angle) * 2)) scale(0.2);
+    opacity: 0;
+  }
+}
+
+.star-particle {
+  position: fixed;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  animation: starFloat 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
