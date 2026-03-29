@@ -15,15 +15,18 @@ const HeartFilledIcon = () => (
 /**
  * Like action button — transparent background with heart icon.
  * active: false (outline heart, black) | true (filled heart, pink #ff2a6a)
+ * count: number shown next to the label (hidden when 0)
  */
-export function LikeButton({ onClick, active = false }) {
+export function LikeButton({ onClick, active = false, count = 0 }) {
   const cls = ['like-button', active ? 'like-button--active' : ''].filter(Boolean).join(' ');
   return (
     <button className={cls} onClick={onClick}>
       <span className="like-button__icon">
         {active ? <HeartFilledIcon /> : <HeartOutlineIcon />}
       </span>
-      <span className="like-button__label">Like</span>
+      {count > 0 && (
+        <span className="like-button__count">{count}</span>
+      )}
     </button>
   );
 }

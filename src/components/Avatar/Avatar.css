@@ -16,3 +16,10 @@
   object-fit: cover;
   display: block;
 }
+
+.avatar__placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--ref-color-neutral-200, #e5e7eb);
+  display: block;
+}

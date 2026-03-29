@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './ProfileCard.css';
 import { Avatar } from '../Avatar/Avatar.jsx';
 import { LinkButton } from '../LinkButton/LinkButton.jsx';
@@ -14,22 +13,14 @@ import { LikeButton } from '../LikeButton/LikeButton.jsx';
  * @param {Array<{icon: React.ReactNode, label: string, href: string}>} props.links
  * @param {(liked: boolean) => void} [props.onLike] - Called with new liked state on toggle
  */
-export function ProfileCard({ avatarSrc, name, bio, links = [], onLike }) {
-  const [liked, setLiked] = useState(false);
-
-  function handleLike() {
-    const next = !liked;
-    setLiked(next);
-    onLike?.(next);
-  }
-
+export function ProfileCard({ avatarSrc, name, bio, links = [], onLike, likeCount = 0 }) {
   return (
     <div className="profile-card">
       <div className="profile-card__profile">
         <Avatar src={avatarSrc} alt={name} size="lg" />
         <div className="profile-card__info">
-          <p className="profile-card__name">{name}</p>
-          <p className="profile-card__bio">{bio}</p>
+          {name && <p className="profile-card__name">{name}</p>}
+          {bio && <p className="profile-card__bio">{bio}</p>}
         </div>
       </div>
 
@@ -40,7 +31,7 @@ export function ProfileCard({ avatarSrc, name, bio, links = [], onLike }) {
       </div>
 
       <div className="profile-card__actions">
-        <LikeButton active={liked} onClick={handleLike} />
+        <LikeButton active={likeCount > 0} onClick={onLike} count={likeCount} />
       </div>
     </div>
   );
